@@ -31,7 +31,7 @@ setup(
     ],
     packages=['us_county_map'],
     package_data={
-        "": ["*.svg"],
+        "us_county_map": ["images/*.svg"],
     },
     python_requires='>=3.6, <4',
     install_requires=['beautifulsoup4>=4', 'click>=7'],
