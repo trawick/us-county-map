@@ -11,7 +11,7 @@ file_with_version = here / 'us_county_map' / '__init__.py'
 def get_version():
     for line in open(file_with_version, encoding='utf-8'):
         if line.startswith('__version__ = '):
-            return line.split()[-1]
+            return line.split()[-1].replace("'", "")
     raise ValueError(f'Package version not found in {file_with_version}')
 
 
