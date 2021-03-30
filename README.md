@@ -4,9 +4,11 @@ Python package to create a US county map SVG with fill colors applied, from CSV 
 
 ## Urgent todos
 
-* push to GitHub and test installation from there
+* rename GitHub repo to `us-county-map`
 * Put full doc in README
+* allow changing header mapping on command line
 * `Makefile` for dev activities
+* research how opacity can be provided for SVG paths; should header have `pct` in the name?
 * tox/TravisCI
 
 ## Dependencies
