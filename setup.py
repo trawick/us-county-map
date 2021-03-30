@@ -30,6 +30,9 @@ setup(
         'License :: OSI Approved :: Apache Software License',
     ],
     packages=['us_county_map'],
+    package_data={
+        "": ["*.svg"],
+    },
     python_requires='>=3.6, <4',
     install_requires=['beautifulsoup4>=4', 'click>=7'],
     entry_points={

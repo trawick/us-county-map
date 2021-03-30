@@ -5,6 +5,9 @@ Python package to create a US county map SVG with fill colors applied, from CSV 
 ## Urgent todos
 
 * push to GitHub and test installation from there
+* Put full doc in README
+* `Makefile` for dev activities
+* tox/TravisCI
 
 ## Dependencies
 
@@ -12,7 +15,17 @@ Python package to create a US county map SVG with fill colors applied, from CSV 
 
 ## How to use
 
-## Resources included
+### Installation
+
+```shell
+$ pip install git+git://github.com/trawick/us_county_map
+```
+
+### Using the CLI
+
+### Using the API from Python
+
+## External resources included
 
 ### USA_Counties.svg
 
