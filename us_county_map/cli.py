@@ -11,6 +11,11 @@ logger = logging.getLogger(__name__)
 @click.argument('county_data', type=click.Path(exists=True))
 @click.argument('output_svg', type=click.Path(exists=False))
 @click.option('--level', type=click.Choice(['DEBUG', 'INFO']), default='INFO')
-def cli(county_data, output_svg, level):
+@click.option('--map', '-m', 'mappings', type=str, multiple=True)
+def cli(county_data, output_svg, level, mappings):
     logging.basicConfig(level=logging.getLevelName(level))
-    create_svg(county_data, output_svg)
+    csv_header_mapping = {}
+    for mapping in mappings:
+        canonical, in_csv = mapping.split('=')
+        csv_header_mapping[canonical] = in_csv
+    create_svg(county_data, output_svg, csv_header_mapping=csv_header_mapping)

@@ -37,7 +37,8 @@ def csv_to_dict(county_data, csv_header_mapping):
 
 
 def create_svg(county_data_path, output_svg_path, csv_header_mapping=None):
-    csv_header_mapping = csv_header_mapping or DEFAULT_CSV_HEADER_MAPPING
+    csv_header_mapping = csv_header_mapping or {}
+    csv_header_mapping = {**DEFAULT_CSV_HEADER_MAPPING, **csv_header_mapping}
 
     with open(county_data_path, 'r', encoding='utf-8') as county_data:
         by_fips_code = csv_to_dict(county_data, csv_header_mapping)
